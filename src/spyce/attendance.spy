@@ -1,0 +1,81 @@
+[[\
+import sys
+import mx
+import mx.DateTime
+import eqlogdb
+eqlogdb = reload(eqlogdb)
+import webutils
+webutils = reload(webutils)
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+w = webutils.getWriter()
+w.start("page")
+
+if request['begin']:
+    begin = mx.DateTime.Parser.DateTimeFromString(request['begin'])
+else:
+    begin = mx.DateTime.Parser.DateTimeFromString('2008-01-01')
+
+if request['end']:
+    end = mx.DateTime.Parser.DateTimeFromString(request['end'])
+else:
+    end = mx.DateTime.now()
+
+conn = eqlogdb.EQLogDB.getConnection()
+cur = conn.cursor()
+sql = """
+select tbl_character.character_id,  tbl_character.name, count(*) from tbl_attendance
+inner join tbl_character on tbl_attendance.character_id = tbl_character.character_id
+where tbl_character.character_type_id = 1 and
+tbl_attendance.start_time >= ? and
+tbl_attendance.end_time <= ? and
+exists (
+select tbl_loot.loot_id from tbl_loot inner join
+tbl_item on tbl_loot.item_id = tbl_item.item_id
+where (tbl_item.item_type_id = 5
+or tbl_item.item_type_id = 6
+or tbl_item.item_type_id = 7)
+and event_timestamp > tbl_attendance.start_time
+and event_timestamp < tbl_attendance.end_time )
+group by tbl_character.character_id, tbl_character.name
+order by count(*) desc
+    """
+sql2 = """
+select tbl_character.character_id,  tbl_character.name, count(*) from tbl_attendance
+inner join tbl_character on tbl_attendance.character_id = tbl_character.character_id
+where tbl_character.character_type_id = 1 and
+tbl_attendance.start_time >= ? and
+tbl_attendance.end_time <= ? and
+exists (
+select tbl_loot.loot_id from tbl_loot inner join
+tbl_item on tbl_loot.item_id = tbl_item.item_id
+where (tbl_item.item_type_id = 5
+or tbl_item.item_type_id = 6
+or tbl_item.item_type_id = 7)
+and event_timestamp > tbl_attendance.start_time
+and event_timestamp < tbl_attendance.end_time )
+group by tbl_character.character_id, tbl_character.name
+order by count(*) desc
+"""
+sql3 = """
+select tbl_character.character_id,  tbl_character.name, count(*) from tbl_attendance
+inner join tbl_character on tbl_attendance.character_id = tbl_character.character_id
+where tbl_character.character_type_id = 1 and
+tbl_attendance.start_time >= ? and
+tbl_attendance.end_time <= ? and
+tbl_attendance.raid_flag = 1
+group by tbl_character.character_id, tbl_character.name
+order by count(*) desc
+    """
+cur.execute(sql3, (begin,end) )
+
+eqlogdb.EQLogDB.resultToXml(cur, w, 'attendance', {
+    'begin': begin, 
+    'end': end,
+    }, 'player')
+w.end()
+
+print webutils.renderContent(request, response, 'attendance.xsl')
+]]

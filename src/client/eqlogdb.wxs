@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<!--
+vim:sw=4 ts=8 smarttab
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+    <!-- Generate a new product code every build. 
+    This ensures that every built installer will do a major
+    upgrade from any previous ones, allowing downgrades
+    and guaranteeing all files get replaced, as long as RemovePrevious
+    is schedule before InstallInitialize
+    -->
+  <Product Id="????????-????-????-????-????????????" UpgradeCode="4E740862-4C84-4644-9DA5-04DD6F54C74F"
+      Language="1033" Manufacturer="Bardeil" Name="Everquest Log Parser"
+      Version="0.0.0.1">
+    <Package Id="????????-????-????-????-????????????" Description="Everquest log parser"
+        Comments="This will appear in the file summary stream." InstallerVersion="200" Compressed="yes" />
+
+    <Upgrade Id="824048C1-C0E3-4b17-AA03-0B7BCA860C06">
+      <UpgradeVersion Minimum="0.0.0" OnlyDetect="no" IncludeMinimum="yes" Property="DOWNGRADE"/>
+    </Upgrade>
+
+    <Media Id="1" Cabinet="Product.cab" CompressionLevel="low" EmbedCab="yes" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramMenuFolder" Name="PMenu" LongName="Programs">
+        <Directory Id="ProgramMenuDir" Name="eqlogdb" LongName="Everquest Log Parser" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="INSTALLDIR" Name="eqlogdb" LongName="Everquest Log Parser">
+            <Component Id="MainExecutable" Guid="AA974809-9DFD-4f8b-95B1-02F8230E2540"></Component>
+        </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="Complete" Title="Complete Installation" Level="1">
+      <ComponentRef Id="MainExecutable" />
+    </Feature>
+
+    <UI>
+      <Property Id="DefaultUIFont">DlgFont8</Property>
+
+      <Dialog Id="InstallDlg" Width="370" Height="270" Title="[ProductName] [Setup]" NoMinimize="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
+        <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes">
+          <Text>[DlgTitleFont]Ready to Install</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes">
+          <Text>The [Wizard] version is ready to begin the installation</Text>
+        </Control>
+        <Control Id="Text" Type="Text" X="25" Y="70" Width="320" Height="20">
+          <Text>Click Install to begin the installation of [ProductName] version [ProductVersion].</Text>
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Install" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="[ButtonText_Install]">
+          <Publish Event="NewDialog" Value="ProgressDlg" />
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="[ButtonText_Cancel]">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+
+      <Dialog Id="FilesInUse" Width="370" Height="270" Title="[ProductName] [Setup]" NoMinimize="yes" KeepModeless="yes">
+        <Control Id="Retry" Type="PushButton" X="156" Y="243" Width="64" Height="17" Default="yes" Cancel="yes" Text="[ButtonText_Retry]">
+          <Publish Event="EndDialog" Value="Retry"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Ignore" Type="PushButton" X="220" Y="243" Width="64" Height="17" Text="[ButtonText_Ignore]">
+          <Publish Event="EndDialog" Value="Ignore"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Exit" Type="PushButton" X="286" Y="243" Width="64" Height="17" Text="[ButtonText_Exit]">
+          <Publish Event="EndDialog" Value="Exit"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
+        <Control Id="Description" Type="Text" X="15" Y="20" Width="300" Height="30" Transparent="yes" NoPrefix="yes">
+          <Text>Some files that need to be updated are currently in use.</Text>
+        </Control>
+        <Control Id="Text" Type="Text" X="20" Y="55" Width="330" Height="30">
+          <Text>The following applications are using files that need to be updated by this setup. Close these applications and then click Retry to continue the installation or Cancel to exit it.</Text>
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="300" Height="15" Transparent="yes" NoPrefix="yes">
+          <Text>[DlgTitleFont]Files in Use</Text>
+        </Control>
+        <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+        <Control Id="List" Type="ListBox" X="20" Y="87" Width="330" Height="130" Property="FileInUseProcess" Sunken="yes" TabSkip="yes" />
+      </Dialog>
+
+      <Dialog Id="ErrorDlg" Y="10" Width="320" Height="105" Title="Installer Information" ErrorDialog="yes" NoMinimize="yes">
+        <Control Id="ErrorText" Type="Text" X="48" Y="15" Width="250" Height="60" TabSkip="no" Text="Information text" />
+        <Control Id="N" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_No]">
+          <Publish Event="EndDialog" Value="ErrorNo"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="Y" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_Yes]">
+          <Publish Event="EndDialog" Value="ErrorYes"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="A" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_Cancel]">
+          <Publish Event="EndDialog" Value="ErrorAbort"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="C" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_Cancel]">
+          <Publish Event="EndDialog" Value="ErrorCancel"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="ErrorIcon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Information icon" FixedSize="yes" IconSize="32" Text="[InfoIcon]" />
+        <Control Id="I" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_Ignore]">
+          <Publish Event="EndDialog" Value="ErrorIgnore"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="O" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_OK]">
+          <Publish Event="EndDialog" Value="ErrorOk"><![CDATA[1]]></Publish>
+        </Control>
+        <Control Id="R" Type="PushButton" X="100" Y="80" Width="64" Height="17" TabSkip="yes" Text="[ButtonText_Retry]">
+          <Publish Event="EndDialog" Value="ErrorRetry"><![CDATA[1]]></Publish>
+        </Control>
+      </Dialog>
+
+      <Dialog Id="ProgressDlg" Width="370" Height="270" Title="[ProductName] [Setup]" Modeless="yes">
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no"
+            Text="[BannerBitmap]" />
+        <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+        <Control Id="StatusLabel" Type="Text" X="35" Y="100" Width="35" Height="10" Text="Status:" />
+        <Control Id="ActionText" Type="Text" X="70" Y="100" Width="265" Height="10">
+          <Subscribe Event="ActionText" Attribute="Text" />
+        </Control>
+        <Control Id="ProgressBar" Type="ProgressBar" X="35" Y="115" Width="300" Height="10" ProgressBlocks="yes"
+            Text="Progress done">
+          <Subscribe Event="SetProgress" Attribute="Progress" />
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Disabled="yes"
+            Text="[ButtonText_Back]" />
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Disabled="yes"
+            Text="[ButtonText_Next]" />
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Default="yes"
+            Cancel="yes" Text="[ButtonText_Cancel]">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+      <Dialog Id="CancelDlg" Width="260" Height="85" Title="[ProductName] [Setup]" NoMinimize="yes">
+        <Control Id="No" Type="PushButton" X="132" Y="57" Width="56" Height="17" Default="yes" Cancel="yes"
+            Text="[ButtonText_No]">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+        <Control Id="Yes" Type="PushButton" X="72" Y="57" Width="56" Height="17" Text="[ButtonText_Yes]">
+          <Publish Event="EndDialog" Value="Exit">1</Publish>
+        </Control>
+        <Control Id="Text" Type="Text" X="48" Y="15" Width="194" Height="30">
+          <Text>Are you sure you want to cancel [ProductName] installation?</Text>
+        </Control>
+        <Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Information icon"
+            FixedSize="yes" IconSize="32" Text="[InfoIcon]" />
+      </Dialog>
+
+      <Dialog Id="ExitDlg" Width="370" Height="270" Title="[ProductName] [Setup]" NoMinimize="yes">
+        <Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
+        <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes">
+          <Text>[DlgTitleFont]Finished installing [ProductName]</Text>
+        </Control>
+        <Control Id="Description" Type="Text" X="100" Y="100" Width="220" Height="20" Transparent="yes" NoPrefix="yes">
+          <Text>Click the Finish button to exit the [Wizard].</Text>
+        </Control>
+		<!--<Control Id="Launch" Type="CheckBox" X="120" Y="150" Width="150" Height="17" Property='LAUNCHPRODUCT' CheckBoxValue='1'>
+		    <Text>Launch [ProductName]</Text>
+		</Control>
+		-->
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Disabled="yes" Text="[ButtonText_Back]" />
+        <Control Id="Finish" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Cancel="yes" Text="[ButtonText_Finish]">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+		    <!--<Publish Event='DoAction' Value='LaunchProduct'>(NOT Installed) AND (LAUNCHPRODUCT = 1)</Publish>-->
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Disabled="yes" Text="[ButtonText_Cancel]" />
+      </Dialog>
+
+      <TextStyle Id="DlgFont8" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="DlgFontBold8" FaceName="Tahoma" Size="8" Bold="yes" />
+      <TextStyle Id="VerdanaBold13" FaceName="Verdana" Size="13" Bold="yes" />
+      <TextStyle Id="TitleFontBold13" FaceName="Verdana" Size="11" Bold="yes" />
+
+      <InstallUISequence>
+        <Show Dialog="InstallDlg" After="CostFinalize" />
+        <Show Dialog="ExitDlg" OnExit="success" />
+      </InstallUISequence>
+
+    </UI>
+
+
+    <Property Id="ALLUSERS">2</Property>
+	<!--<Property Id='ARPCOMMENTS'>any comments</Property>-->
+    <Property Id="ARPCONTACT">bardeil@azgaard.net</Property>
+    <Property Id="ARPHELPLINK">http://eqlogdb.azgaard.net/</Property>
+	<!--<Property Id='ARPURLINFOABOUT'>http://www.ilsw.com/product/helptool/</Property>-->
+	<!--<Property Id='ARPURLUPDATEINFO'>http://www.ilsw.com/client/update/</Property>-->
+    <Property Id="ARPHELTELEPHONE">(269) 473-3103</Property>
+	<!--<Property Id='ARPREADME'>path</Property>-->
+	<!--<Property Id='ARPSIZE'>app size in kilobytes</Property>-->
+    <Property Id="ARPPRODUCTICON">lpgui.exe</Property>
+
+    <Property Id="ButtonText_Install">&amp;Install</Property>
+    <Property Id="Setup">Setup</Property>
+    <Property Id="CustomSetupIcon">custicon</Property>
+    <Property Id="ButtonText_Next">&amp;Next &gt;</Property>
+    <Property Id="ButtonText_Back">&lt; &amp;Back</Property>
+    <Property Id="InstallMode">Typical</Property>
+    <Property Id="Progress2">installs</Property>
+    <Property Id="Wizard">Setup Wizard</Property>
+    <Property Id="RemoveIcon">removico</Property>
+    <Property Id="ExclamationIcon">exclamic</Property>
+    <Property Id="ShowUserRegistrationDlg">1</Property>
+    <Property Id="ProductID">none</Property>
+    <Property Id="ButtonText_Reset">&amp;Reset</Property>
+    <Property Id="ButtonText_Remove">&amp;Remove</Property>
+    <Property Id="CompleteSetupIcon">completi</Property>
+    <Property Id="ButtonText_Exit">&amp;Exit</Property>
+    <Property Id="ButtonText_Return">&amp;Return</Property>
+    <Property Id="DialogBitmap">dlgbmp</Property>
+    <Property Id="DlgTitleFont">{&amp;DlgFontBold8}</Property>
+    <Property Id="ButtonText_Ignore">&amp;Ignore</Property>
+    <Property Id="RepairIcon">repairic</Property>
+    <Property Id="ButtonText_Resume">&amp;Resume</Property>
+    <Property Id="InstallerIcon">insticon</Property>
+    <Property Id="ButtonText_Finish">&amp;Finish</Property>
+    <Property Id="PROMPTROLLBACKCOST">P</Property>
+    <Property Id="PIDTemplate"><![CDATA[12345<#######>@@@@@]]></Property>
+    <Property Id="Progress1">Installing</Property>
+    <Property Id="ButtonText_Cancel">Cancel</Property>
+    <Property Id="INSTALLLEVEL">3</Property>
+    <Property Id="InfoIcon">info</Property>
+    <Property Id="ButtonText_Repair">&amp;Repair</Property>
+    <Property Id="ButtonText_Retry">&amp;Retry</Property>
+    <!--<Property Id="BannerBitmap">bannrbmp</Property>-->
+    <Property Id="ButtonText_OK">OK</Property>
+    <Property Id="ButtonText_Yes">&amp;Yes</Property>
+    <Property Id="ButtonText_No">&amp;No</Property>
+
+    <!--<Binary Id="bannrbmp" src="Banner.bmp" />-->
+
+    <CustomAction Id="SET_TARGETDIR" Property="TARGETDIR"
+        Value="[ProgramFilesFolder][ProductName]"
+        Execute="firstSequence" />
+    <AdminExecuteSequence></AdminExecuteSequence>
+
+    <InstallExecuteSequence>
+	    <!-- Remove everything before installing, allowing downgrades and guaranteeing changes
+	    will get installed regardless of whether or not version codes have been updated
+	    -->
+      <RemoveExistingProducts Before="InstallInitialize" />
+
+	    <!-- Remove everything after installing. Effectively eliminates downgrading -->
+	    <!-- <RemoveExistingProducts After='InstallFinalize' />-->
+
+	    <!-- Use this CA to disallow downgrades -->
+	    <!--<Custom Action='AlreadyUpdated' After='FindRelatedProducts'>DOWNGRADE</Custom>-->
+    </InstallExecuteSequence>
+  </Product>
+</Wix>
+

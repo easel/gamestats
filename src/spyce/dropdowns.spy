@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+[[\
+    import eqlogdb
+    eqlogdb = reload(eqlogdb)
+    import webutils
+    webutils = reload(webutils)
+
+    webutils.setContentType(request, response)
+
+]]
+<!--
+vim: sw=4 ts=8 expandtab
+-->
+
+<xsl:stylesheet
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+        xmlns:date="http://exslt.org/dates-and-times"
+            extension-element-prefixes="date"
+            >
+
+
+<xsl:template name="item_type">
+<xsl:param name="field_name"></xsl:param>
+<xsl:param name="field_id"></xsl:param>
+<xsl:param name="item_id"></xsl:param>
+<xsl:param name="selected"></xsl:param>
+<select name="{$field_name}" id="{$field_id}" onChange="Javascript:setItemType({$item_id}, '{$field_id}')">
+<option value=""/>
+[[\
+    for rec in eqlogdb.EQLogDB.getLookup('TLKP_ITEM_TYPE'):
+	print "<xsl:if test=\"not($selected=%d)\"><option value=\"%d\">%s</option></xsl:if>" %(rec[0], rec[0], rec[1])
+	print "<xsl:if test=\"$selected=%d\"><option selected=\"selected\" value=\"%d\">%s</option></xsl:if>" %(rec[0], rec[0], rec[1])
+]]
+</select>
+</xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,15 @@
+<%
+import eqlogdb
+from elementtree.SimpleXMLWriter import XMLWriter
+req.content_type = 'text/xml'
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+cur.execute("""
+select MOB_ID, NAME, 'mob.spy?mob_id=' || MOB_ID as MOB_URL from TBL_MOB
+""")
+w = XMLWriter(req)
+req.write('<?xml-stylesheet href="mobs.xsl" type="text/xml"?>')
+w.start("page")
+eqlogdb.EQLogDB.resultToXml(cur, w, 'mobs', None, 'mob')
+w.end()
+%>

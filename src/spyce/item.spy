@@ -1,0 +1,37 @@
+[[\
+import sys
+import eqlogdb
+import webutils
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+if request['set_item_type'] and request['item_id']:
+    try:
+        cur.execute("update TBL_ITEM set ITEM_TYPE_ID = ? where ITEM_ID = ?", 
+            [request['set_item_type'], request['item_id'] ])
+        print request['set_item_type']
+    finally:
+        con.commit()
+else:
+    w = webutils.getWriter()
+
+    w.start("page")
+    cur.execute(""" select * from TBL_ITEM where ITEM_ID = ?  """, [request['item_id'] ])
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'items', None, 'item')
+    sql = """ select TBL_LOOT.ITEM_ID, TBL_LOOT.CHARACTER_ID, TBL_LOOT.EVENT_TIMESTAMP as LOOT_TIMESTAMP,
+    TBL_ITEM.NAME as ITEM_NAME, TBL_CHARACTER.NAME as PLAYER_NAME,
+    'character.spy?character_id=' || TBL_LOOT.CHARACTER_ID as PLAYER_URL
+    from TBL_LOOT 
+    inner join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID
+    inner join TBL_CHARACTER on TBL_LOOT.CHARACTER_ID = TBL_CHARACTER.CHARACTER_ID
+    where TBL_LOOT.ITEM_ID = ? order by TBL_LOOT.EVENT_TIMESTAMP  
+    """
+    cur.execute(sql, [request['item_id'] ])
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'looters', None, 'looter')
+    w.end()
+    print webutils.renderContent(request, response, 'item.xsl')
+con.close()
+]]

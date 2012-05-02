@@ -1,0 +1,38 @@
+[[\
+import eqlogdb
+
+from elementtree import ElementTree
+
+if request.method() == 'POST':
+    bytes = int(request.env('CONTENT_LENGTH'))
+    db = eqlogdb.EQLogDB()
+    tree = ElementTree.parse(request._api.getRequest())
+    elem = tree.getroot()
+    userid = db.findUserID(elem.get('submitter'))
+
+    elem = tree.getroot().find('loot')
+    for child in elem.getchildren():
+        characterid = db.findCharacterID(child.get('looter'))
+        itemid = db.findItemID(child.get('item'))
+        timestamp = child.get('timestamp').replace('T', ' ')
+        db.addLoot(userid, timestamp, characterid, itemid)
+
+    elem = tree.getroot().find('attendance')
+    for child in elem.getchildren():
+        characterid = db.findCharacterID(child.get('name'))
+        start_time = child.get('start_time').replace('T', ' ')
+        end_time = child.get('end_time').replace('T', ' ')
+        db.addAttendee(userid, characterid, start_time, end_time)
+
+    elem = tree.getroot().find('kills')
+    for child in elem.getchildren():
+        killer = db.findCharacterID(child.get('killer'))
+        killee = db.findCharacterID(child.get('killee'))
+        timestamp = child.get('timestamp').replace('T', ' ')
+        db.addKill(userid, killer, killee, timestamp)
+    db.commit()
+
+    print 'submission successful for userid %d'%(userid)
+else:
+	print 'epic FAIL!'
+]]

@@ -1,0 +1,54 @@
+[[.import name=redirect]]
+[[\
+"""
+vim: sw=4 ts=8 expandtab
+"""
+
+import sys
+import eqlogdb
+import webutils
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+
+
+if request['skip']:
+    skip = int(request['skip'])
+else:
+    skip = 0
+
+if request['count']:
+    count = int(request['count'])
+else:
+    count = 50
+
+if request['playerQuery']:
+    where = "where Upper(TBL_CHARACTER.NAME) like ?"
+    args = [ '%' + request['playerQuery'].upper() + '%' ]
+else:
+    where = ''
+    args = []
+
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+sql = """
+	select FIRST %d SKIP %d distinct TBL_CHARACTER.CHARACTER_ID, TBL_CHARACTER.NAME, 
+	'character.spy?character_id=' || TBL_CHARACTER.CHARACTER_ID as CHARACTER_URL 
+	from TBL_CHARACTER inner join TBL_LOOT on TBL_CHARACTER.CHARACTER_ID = TBL_LOOT.CHARACTER_ID
+	%s
+	ORDER BY TBL_CHARACTER.NAME;
+""" %(count, skip, where)
+#raise Exception(sql)
+cur.execute(sql, args)
+row = cur.fetchonemap()
+if cur.rowcount == 1:
+    redirect.external(row['CHARACTER_URL'])
+    
+w = webutils.getWriter()
+w.start('page', SKIP=str(skip), COUNT=str(count))
+eqlogdb.EQLogDB.resultToXml(cur, w, 'characters', None, 'character')
+w.end()
+print webutils.renderContent(request, response, 'characters.xsl')
+
+]]

@@ -1,0 +1,4 @@
+<%
+import sys
+req.write(" ".join(sys.path))
+%>

@@ -1,0 +1,257 @@
+03/10/2005,Ikkinz Raid 2,Caven,Deahtcaller's Stonewind,Guardian of Glorification,,47,UFM
+03/04/2005,DoN (Instanced),Bremmer,racer of the Warriors,Trial of Perserverance,,49,UFM
+03/11/2005,Harbringer's Spire,Xasanar,Epic 1.5 Kill,Windrush,,53,UFM
+03/11/2005,PoInnovation,Ninsies,Epic 1.5 Kill,a Greasy Clockwork,,55,UFM
+03/11/2005,PoJustice,Tteak,Epic 1.5 Kill,Seventh Hammer,,57,UFM
+03/11/2005,Bloodfields,Xasanar,Epic 1.5 Kill (FINAL),The Keeper,,61,UFM
+03/11/2005,Bloodfields,Ninsies,Epic 1.5 Kill,War Caller Kaavi,,63,UFM
+03/06/2005,PoA,Tteak,Exquisite Puresteel,Xegony,,64,UFM
+03/11/2005,Bloodfields,Tteak,Epic 1.5 Kill,Kragsmash,,65,UFM
+03/11/2005,Bloodfields,Skru,Epic 1.5 Kill,Girplan Devourer,,67,UFM
+03/11/2005,Siren's Grotto,Khai,Epic 1.5 Kill,Wygrish,,68,UFM
+03/05/2005,PoW,Nefert,Seaweed Woven Legs,Grioihin the Wise,,69,UFA
+03/11/2005,Siren's Grotto,Ninsies,Epic 1.5 Kill (FINAL),Faleniel of the Darkwaters,,70,UFM
+03/11/2005,Siren's Grotto,Kadilia,Epic 1.5 Kill,Mistress of the Darkwaters,,73,UFM
+03/11/2005,Western Wastes,Loqutanq,Epic 1.5 Kill,Sir Elmonious Falmont,,77,UFM
+03/11/2005,DN,Siddharta,Epic 1.5 Kill,Vesthons Draconic Abomination,,80,TKM
+03/11/2005,DN,Siddharta,Epic 1.5 Kill,The Dracoliche of Hsagra,,81,TKM
+03/11/2005,Bloodfields,Koshling,Epic 1.5 Kill,Grinbik the Fertile,,83,UFM
+03/11/2005,Bloodfields,Gorgirm,Epic 1.5 Kill,Girplan Devourer,,84,TKM
+03/05/2005,DoN (Instanced),Drmiangoth,Ring of Living Malichite,Emoush,,85,UFM
+03/12/2005,Wall of Slaughter,Konarg,Dragorn City Ember (Legs),Murkglider Hive Queen,,89,UFM
+03/12/2005,Wall of Slaughter,Saelen,Dragorn City Ember (Legs),Pyrique Redwing,,91,UFM
+03/08/2005,RCoD,Felnar,Agtagonist's Notched Staff,Kyv Sharpshooters,,93,UFM
+03/12/2005,Wall of Slaughter,Nandian,Epic 1.5 Kill (FINAL),Girplan Guardian,,94,TKO
+03/12/2005,RCoD,Rheana,Buckled Leather Neck Piece,Zun,,96,UFM
+03/08/2005,RCoD,Peeter,Battle-scarred Faceguard,Battlemaster,,98,UFM
+03/12/2005,RCoD,Gaulic,Dragorn Elder Scepter (BP),Tornwing,,101,TKM
+03/12/2005,RCoD,Ixus,Dranik Blood Standard (wrist),Ungi the Swift,,104,UFM
+03/09/2005,Ikkinz1,Klavyn,Bloodlink Chainmail,Priest of Righteousness,,111,UFM
+03/09/2005,Ikkinz1,Rhombus,Shinning Bloodstone,Priest of Righteousness,,114,TKM
+03/12/2005,The Ruined City of Dranik,Koshling,Epic 1.5 Kill (FINAL),Ulsima Lord of the Depths,,117,UFM
+03/09/2005,Ikkinz1,Qinla,Runed Flesh-Banned Leggings,Spirit of Tunik Tamuik,,118,TKM
+03/09/2005,Ikkinz1,Konarg,Taelosian Geomancy Stone of Jelki,Spirit of Tunik Tamuik,,120,UFM
+03/09/2005,Ikkinz1,Phaite,Taelosian Geomancy Stone of Jelki,Crumbling Monolith,,122,UFM
+03/13/2005,PoInnovation,Wilheim,Epic 1.5 Kill,a Greasy Clockwork,,128,UFM
+03/13/2005,Natimbi,Silverspear,Epic 1.5 Kill,Senvial of the Mist,,129,UFM
+03/13/2005,Steamfront Mts.,Maday,Epic 1.5 Kill,Undead Renux,,130,UFM
+03/13/2005,Castle Mistmoore,Xasanar,"Spirit Talker, Staff of Lost Souls",Tyrian the Tormented,,131,UFM
+03/13/2005,Scarlet Desert,Crocmort,Epic 1.5 Kill,Sun Rev,,134,UFM
+03/14/2005,Time (Phase 3),Harjo,Timeless Coral Greathsword,Phase 3,,150,TKM
+03/14/2005,Time (Phase 4),Felnar,Symbol of the Plansemaster,Saryn,,152,UFM
+03/01/2005,Wall of Slaughter,Vael,Murkglider's Eye,Murkglider Hive Queen,,8,UFM
+03/01/2005,Wall of Slaughter,Klinci,Epic Kill 1.5 (FINAL),Girplan Guardian,,12,UFM
+03/01/2005,Scarlet Desert,Nandian,Epic 1.5 Kill,Sun Rev,,13,TKO
+03/01/2005,RCoD,Slamdar,Volkana's Wristplate,Zun,,18,UFM
+03/02/2005,RCoD,Valde,Chipped Iron Ixtshore,Battlemaster,,21,UFM
+03/02/2005,DoN (Instanced),Scoricco,Ancient Feline Leggings,Volkara,,23,TKM
+03/02/2005,Mistmoore,Hrasa,Dirgeful Deathgrime Leggins,Heyda,,24,UFO
+03/02/2005,Mistmoore,Kerk,"Spirit Talker, Staff of Lost Souls",Hinnan,,25,UFM
+03/03/2005,The Ruined City of Dranik,Alindawyl,Dragorn Inscribed Caduceus,Tiorpat,,34,TKM
+03/03/2005,RCoD,Livian,Broad Collar of Amubush,Kyv Sharpshooters,,35,TKA
+03/03/2005,RCoD,Ganarak,Petrified Splintershaft,Zun,,41,UFO
+03/10/2005,Ikkinz Raid 2,Samp,Deathwrap of Rite,Guardian of Glorification,,44,UFO
+03/14/2005,Time (Phase 4),Kerk,Earring of Coporeal Essence,Terris Thule,,155,UFM
+03/14/2005,Time (Phase 4),Joush,"Vanzir, Dreamer's Dispair",Terris Thule,,157,UFM
+03/14/2005,Time (Phase 4),Velheer,Wand of Temporary Power,Tallon Zek,,158,UFM
+03/14/2005,Time (Phase 4),Fiver,Wand of Temporary Power,Tallon Zek,,159,UFM
+03/14/2005,Time (Phase 4),Kysumu,Band of Prismatic Force,Tallon Zek,,160,UFM
+03/14/2005,Time (Phase 5),Alindawyl,Zellots Spiked Bracer,Cazic Thule,,162,TKM
+03/15/2005,Time (Phase 5),Lealani,Timeless Leather Tunic Patter,Bertoxxulous,,172,UFM
+03/15/2005,Time (Phase 5),Phaite,Necklace of Eternal Vision,Innoruuk,,176,UFM
+03/18/2005,Wall of Slaughter,Cordius,Hulcror's Hide Collar,Hulcror,,184,UFM
+06/26/2005,Uqua,Foldor,Diamond Tipped War Javelin,,,196,UFM
+06/23/2005,Castle Mistmoore,Lealani,Cryptwalkers Ring of Protection,Tyrian the Tormented,,206,UFM
+06/18/2005,Yxxta,Loqutanq,Blood Glazed Bracer,Pixxt Suir Mindrider,,208,UFM
+06/18/2005,Yxxta,Torwren,Ikkiv Scale Cape,Pixxt Suir Mindrider,,209,UFM
+06/16/2005,Ikkinz 2,Bobgib,Shale shoulder pads,,,216,UFA
+06/14/2005,Time (Phase 3),Seahawk,Elemental Chain Pants,,,218,UFM
+06/14/2005,Time (Phase 3),Gorgirm,Elemental Plate Greaves,,,219,TKM
+06/14/2005,Time (Phase 3),Terrascar,Elemental Chain Pants,,,221,UFA
+06/14/2005,Time (Phase 3),Belmagus,Time Traveler's Adorned Notebook,,,222,TKM
+06/14/2005,Time (Phase 3),Doldorf,Elemental Plate Greaves,,,223,TKM
+06/12/2005,The Ruined City of Dranik,Gynx,Murumite Shield of Legends,Zun`Muram Volklana,,239,UFM
+06/12/2005,The Ruined City of Dranik,Nallaa,Battle Scarred Faceguard,Battlemaster Rhorious,,240,UFM
+06/12/2005,Tirranun's Delve,Diablosickbon,Hands of flame,Tirranun,,242,UFM
+06/11/2005,Uqua,Mordania,Statuette of the Trushar,,,245,UFM
+06/11/2005,Uqua,Twiitcher,Cerimonial Jade Inlayed Cuirass,,,246,UFM
+06/11/2005,Uqua,Ogarsi,Crescent Emblazoned Jerkin,,,247,UFM
+05/16/2005,The Ruined City of Dranik,Klinci,Blood red Mittens,Battlemaster Rhorious,,259,UFM
+05/01/2005,Wall of Slaughter,Valde,Hulcror's Collar,Hulcror,,262,UFM
+05/01/2005,Ikkinz 4,Blixus,Darkglint Blade,Altar Overseer,,265,UFM
+06/29/2005,The Ruined City of Dranik,Zarax,Dragorn Scepter,Tiporat,,269,UFO
+06/29/2005,The Ruined City of Dranik,Bobgib,Shroud of Visions,Zun`Muram Volklana,,270,UFA
+06/29/2005,The Ruined City of Dranik,Tilenea,Petrified Splinter Staff,Zun`Muram Volklana,,271,UFM
+05/03/2005,Time (Phase 3),Ninsies,Elemental Silk Pants,,,274,UFM
+05/03/2005,Time (Phase 4),Immotepp,Belt of Temporal Bindings,Bertoxxulous,,291,TKM
+07/01/2005,Ikkinz 4,Zarax,Gem Inlayed Ritual Cloak,Keeper of the Altar,,294,UFO
+07/01/2005,Ikkinz 4,Vael,Gem Inlayed Ritual Cloak,Keeper of the Altar,,295,UFM
+05/15/2005,Yxxta,Torwren,Heart of the beast,Primal insect,,298,UFM
+05/15/2005,Yxxta,Valde,Blessed heart,Primal spider,,300,UFM
+05/4/2005,Ikkiz 4,Paladore,Ring of the brutish beasts,Altar Overseer,,303,UFO
+05/14/2005,Ikkinz 4,Bardeil,Oracle of the Altar,Ring of the Brutish Beasts,,304,UFM
+07/02/2005,Time (Phase 3),Aiana,Elemental Silk Pants Pattern,,,309,UFM
+07/02/2005,Time (Phase 4),Xasanar,Earring fo Corporeal Essence,Terris Thule,,312,UFM
+07/02/2005,Time (Phase 4),Fierire,Cloak of Falling Skies,Tallon Zek,,318,UFO
+07/02/2005,Time (Phase 6),Juggernaut,Timeless Breasplate Mold,Quarm,,339,UFM
+05/08/2005,The Ruined City of Dranik,Koll,Battle Scarred Faceguard,Battlemaster Rhorious,,343,UFM
+05/05/2005,Castle Mistmoore,Lealani,Leggings of Woe,Tyrian the Tormented,,344,UFM
+05/05/2005,Mistmore,Shaolyin,Lich stick,Heyda,,345,BOT
+05/04/2005,Time (Phase 5),Keyera,Necklace of Eternal Vision,Innoruuk,,350,UFM
+05/04/2005,Time (Phase 5),Mordania,Barrier of the Freezing Winds,Innoruuk,,352,UFM
+05/04/2005,Time (Phase 6),Immotepp,Spool of Woven Time,Quarm,,354,TKM
+07/04/2005,The Bloodfields,Jeyct,Epic 1.5 Final Kill,,,361,UFM
+07/09/2005,Time (Phase 3),Khari,Ossein of Limitless Time,,,372,UFA
+07/09/2005,Time (Phase 4),Lizzie,Mantle of Deadly Precision,Tallon Zek,,380,UFM
+07/09/2005,Time (Phase 4),Fawlyn,Timeless Silk Robe,Vallon Zek,,382,UFM
+07/09/2005,Time (Phase 5),Xasanar,Bo Staff of Transcendance,Cazic Thule,,383,UFM
+07/09/2005,Time (Phase 5),Tessladarie,Timeless Silk Robe,Cazic Thule,,384,UFM
+05/22/2005,The Ruined City of Dranik,Harjo,Bone-Rending Battlesword,Battlemaster Rhorious,,397,TKM
+05/22/2005,The Scarlet Desert,Kadilia,Epic 1.5 Final Kill,Elite Sun Revenant,,398,UFM
+06/03/2005,Noble's Causeway,Mychoce,Epic 1.5 Final Kill,,,401,UFM
+06/03/2005,The Scarlet Desert,Alindawyl,Epic 1.5 Final Kill,,,402,TKM
+06/05/2005,Wall of Slaughter,Drmiangoth,Epic 1.5 Final Kill,,,417,UFM
+06/05/2005,Ikkinz 1,Shmenge,Darkglint blade,,,418,UFO
+06/07/2005,Time (Phase 3),Keyera,Elemental Plate Greaves,,,426,UFM
+06/07/2005,Time (Phase 5),Antanka,Belt of Tidal Energy,Cazic Thule,,438,TKM
+06/07/2005,Time (Phase 5),Buzak,Timeless Leather Breastplate,Bertoxxulous,,441,UFM
+06/07/2005,Time (Phase 5),Koll,Timeless Breastplate,Rallos Zek,,444,UFM
+06/07/2005,Time (Phase 5),Bardeil,Ton Po's mystical pouch,Rallos Zek,,445,UFM
+04/23/2005,Wall of Slaughter,Kadilia,Epic 1.5 Kill,,,464,UFM
+04/22/2005,Ikkinz 3,Immotepp,Aegis of Blackscales,Transcendant Acolyte,,474,TKM
+04/21/2005,Time (Phase 5),Morphail,Timeless Silk Robe,Cazic Thule,,476,UFM
+04/21/2005,Time (Phase 5),Wand of Impenetrable Force,Neskrtu,Cazic Thule,,477,TKM
+04/21/2005,Time (Phase 5),Drezze,Visor of the Berzerker,Rallos Zek,,483,UFM
+05/21/2005,Ikkinz 4,Llywellen,Ring of Brutish Beasts,Altar Overseer,,508,TKM
+05/21/2005,Ikkinz 4,Shmenge,Glyx Lined Vrex Cloak,Keeper of the Altar,,511,UFO
+05/23/2005,Ikkinz 1,Elvy,Darkglint blade,Defender of Righteousness,,516,UFM
+05/24/2005,Time (Phase 3),Lilyith,Elemental Chain Pants,,,519,UFM
+05/24/2005,Time (Phase 3),Union,Elemental Chain Pants,,,521,TKM
+05/24/2005,Time (Phase 3),Harjo,Elemental Plate Greaves,,,522,TKM
+05/28/2005,Yxtta,Konarg,Hex Linked Boots,Pixxt Suir Mindrider,,539,UFM
+05/28/2005,Yxtta,Drezze,Blood Glazed Bracer,Pixxt Suir Mindrider,,540,UFM
+05/28/2005,Ikkinz 4,Valde,Ring of Brutish Beasts,Altar Overseer,,541,UFM
+05/17/2005,Time (Phase 3),Kudladar,Elemental Leather Pants,,,548,TKM
+05/17/2005,Time (Phase 4),Balbus,Earring of Temporal Stasis,Vallon Zek,,563,UFM
+05/17/2005,Time (Phase 5),Maday,Timeless Chain Breastplate,Innoruuk,,574,UFM
+05/17/2005,Time (Phase 6),Craxtion,Timeless Silk Robe,Quarm,,575,UFM
+05/06/2005,Wall of Slaughter,Felnar,Epic 1.5 Kill,Dragorn Champion,,580,UFM
+05/06/2005,The Bloodfields,Gorgirm,Epic 1.5 Final Kill,,,583,TKM
+05/10/2005,Time (Phase 3),Kyannax,Cloak of Wishes,,,584,BOT
+05/10/2005,Time (Phase 3),Craxtion,Elemental Silk Pants,,,585,UFM
+05/10/2005,Time (Phase 3),Hunden,Elemental Leather Pants,,,586,BOT
+05/10/2005,Time (Phase 4),Menelyagor,Holy Hammer of Vengeance,Vallon Zek,,600,UFM
+05/10/2005,Time (Phase 5),Ninsies,Timeless Silk Robe,Cazic Thule,,602,UFM
+05/10/2005,Time (Phase 5),Mordania,ImpeWand of Impenetrable Force,Cazic Thule,,603,UFM
+05/10/2005,Time (Phase 5),Lennadori,Sandles of Empowerment,Rallos Zek,,608,UFM
+04/27/2005,Wall of Slaughter,Lizzie,Velitorkin's Femur,Velitorkin,,622,UFM
+04/28/2005,The Ruined City of Dranik,Caeil,Battle Scarred Faceguard,Battlemaster Rhorious,,630,UFM
+04/28/2005,Ikkinz 3,Alix,Ritual Spine Slicer,Vrex Xalkak Nixki,,633,UFM
+07/12/2005,The Ruined City of Dranik,Baneblade,Bone-Rending Battlesword,Battlemaster Rhorious,,639,UFA
+07/16/2005,Time (Phase 4),Hunden,Orb of Clinging Death - ROT,Terris Thule,,649,UFM
+07/16/2005,Time (Phase 4),Hunden,Tactician's Shield - ROT,Tallon Zek,,656,UFM
+07/16/2005,Time (Phase 4),Torwren,Earring of Temporal Stasis,Vallon Zek,,658,UFM
+07/16/2005,Time (Phase 4),Kysumu,Temporal Chainmail Armguards,Vallon Zek,,660,UFM
+07/16/2005,Time (Phase 5),Klinci,Wand of Impenetrable Force - ROT,Cazic Thule,,661,UFM
+07/16/2005,Time (Phase 5),Fawlyn,Timeless Silk Robe,Cazic Thule,,663,UFM
+07/16/2005,Time (Phase 6),Lizzie,Cord of Temporal Weavings,Quarm,,670,UFM
+07/23/2005,Time (Phase 6),Sharrow,Timeless Chain Breastplate,Quarm,,699,UFM
+07/23/2005,Time (Phase 3), Shaolyin,Fiery Crystal Guard,,,716,UFM
+07/23/2005,Time (Phase 4),Saelen,Cudgel of Venemous Hatred,Terris Thule,,718,UFM
+07/23/2005,Time (Phase 5),Tteak,Staff of Transcendance,Cazic Thule,,727,UFM
+07/29/2005,The Ruined City of Dranik,Sporti,Muramite's Shield of Legends,Zun`Muram Volklana,,740,UFM
+07/30/2005,Time (Phase 4),Kadilia,Timeless Silk Robe,Cazic Thule,,761,UFM
+07/30/2005,Ikkinz 2,Wolfish (GUEST),Darkglint Blade,,,774,UFM
+07/31/2005,The Ruined City of Dranik,Kerk,Chipped Iron Ixt Shoe,Battlemaster Rhorious,,780,UFM
+08/02/2005,Stillmoon Temple,Mirlay,Wrapped Glass Shard,Shogurei,,787,UFM
+08/06/2005,Time (Phase 4),Gatoloco,Amulet of Cystal Dreams,Tallon Zek,,806,UFA
+08/06/2005,Time (Phase 5),Terril,Timeless Chain Tunic,Innoruuk,,815,UFM
+08/06/2005,Time (Phase 6),Amios,Timeless Chain Tunic,Quarm,,820,UFA
+08/05/2005,Uqua,Tqiv Qukret,Statuette of Trushar,Gaktor,,822,UFM
+08/07/2005,Ikkinz 4,Sporti,Robe of  Destruction,,,829,UFM
+08/07/2005,Ikkinz 4,Xasanar,Stone Worked Pauldrons,,,830,UFM
+08/07/2005,Ikkinz 4,Rhunfer,Glyph Lined Vrex Cloak,,,831,UFM
+08/13/2005,Time (Phase 5),Kadilia,Wand of Impenetrable Forces,Cazic Thule,,919,UFM
+08/13/2005,Time (Phase 6),Tilenea,Timeless Chain Tunic,Quarm,,931,UFM
+08/16/2005,Qvic,Greathyperio,Muramite Helm Armoret,Mshas,,953,UFM
+08/19/2005,Ikkinz 4,Samp,Stone Worked Pauldrons,Keeper of the Altar,,987,UFM
+08/19/2005,Ikkinz 4,Veil of Entrancement,Albatross,Keeper of the Altar,,989,UFM
+08/20/2005,Time (Phase 4),Zalutstion,Cloak of Falling Skies,Tallon Zek,,997,BOT
+08/21/2005,The Ruined City of Dranik,Mordania,Muramite's Shield of Legends,Zun`Muram Volklana,,1038,UFM
+08/21/2005,Uqua,Yukon,Lavendar Cloak of Destruction,Twins,,1046,UFM
+08/21/2005,Uqua,Lusey,Lavendar Cloak of Destruction,Twins,,1047,UFM
+08/27/2005,Uqua,Lusey,Carved Stone-link Greaves,,,1065,UFM
+08/28/2005,Time (Phase 5),Voedoo,Timeless Silk Breastplate,Cazic Thule,,1087,UFM
+08/28/2005,Time (Phase 5),Buzak,Staff of Transcendance,Cazic Thule,,1089,UFM
+08/28/2005,Time (Phase 5),Greathyperio,Visor of the Berzerker,Rallos Zek,,1094,UFM
+08/28/2005,Time (Phase 5),Yukon,Timeless Chain Breastplate,Innoruuk,,1096,UFM
+09/04/2005,TIme (Phase 4),Loqutanq,Cudgel of Venemous Hatred,Terris Thule,,1143,UFM
+09/04/2005,Time (Phase 5),Gourge,Timeless Leather Breastplate,Bertoxxulous,,1147,UFM
+09/07/2005,Qvic,Koshling,Ancient Chaos Rune,Iqthinxa Karnkvi,,1161,UFM
+09/11/2005,Time (Phase 5),Liizzie,Staff of Transcendance,Cazic Thule,,1208,UFM
+09/11/2005,Time (Phase 5),Torwren,Timeless Leather Breastplate,Bertoxxulous,,1210,UFM
+09/11/2005,Time (Phase 5),Vectinn,Timeless Plate Breastplate,Rallos Zek,,1213,UFM
+09/18/2005,Time (Phase 4),Rovidan,Cloak of Falling Skies,Tallon Zek,,1258,BOT
+09/18/2005,Time (Phase 5),Lazzlo,Timeless Chain Breastplate,Innoruuk,,1270,UFM
+09/19/2005,Qvic,Szithis,Ancient Chaos Runes,Iqthinxa Karnkvi,,1290,UFM
+10/01/2005,The Ruined City of Dranik,Katibree,Petrified Splinterstaff,Zun`Muram Volklana,,1346,BOT
+10/11/2005,The Accursed Nest,Juggernaut,Disc of Dragon Kind,Circle of Drakes,,1398,UFM
+10/16/2005,Plane of Time,Juggernaut,Symbol of Planemasters,Saryrn,,1425,UFM
+10/29/2005,Uqua,Terril,Carved Stone-link Greaves,Devastating Construct,,1471,UFM
+11/05/2005,Riftseekers' Sanctum,Zulaqua's Cloak,Torwren,Queen Pyrilonis,,1557,UFM
+11/05/2005,Riftseekers' Sanctum,Crystal Dagger,Damios,Queen Pyrilonis,,1558,UFM
+11/03/2005,Time (Phase 5),Gaktor,TImeless Silk Robe,Cazic Thule,,1561,TKM
+11/10/2005,Time (Phase 5),Aaley,Timeless Leather Tunic,Bertoxxulous,,1580,UFM
+11/10/2005,Time (Phase 5),Zaggran,Timeless Chain Tunic,Innoruuk,,1583,UFA
+11/10/2005,Time (Phase 5),Elaric,Timeless Plate Breastplate,Rallos Zek,,1586,UFM
+11/13/2005,Qvic,Meloidiee,Muramite Sleeve Armor,Mshas,,1596,BOT
+11/20/2005,Time (Phase 5),ROT,Wand of Impenetrable Force,Cazic Thule,,1632,UFM
+11/29/2005,Time (Phase 4),Loamdog,Cloak of Falling Skies,Tallon Zek,,1685,UFM
+11/29/2005,Time (Phase 5),Jaey,Timeless Leather Tunic,Bertoxxulous,,1694,UFM
+11/29/2005,Time (Phase 5),Sarouzek,Freezing Mind,Innoruuk,,1698,UFA
+12/02/2005,The Ascent,Juggernaut,Frosted Cuirass of Englightenment,Kessdona the Enlightened,,1712,UFM
+12/02/2005,The Ascent,Skooch,Frosted Cuirass of Englightenment,Kessdona the Enlightened,,1713,UFM
+12/02/2005,Thundercrest Isles,Virgule,Thundercrest Girdle,Yar`Lir the Matriarch,,1714,UFM
+12/05/2005,The Ruined City of Dranik,Orbus,Protective Stitched-Hide Leggings,Lirah the Bridgekeeper,,1719,UFM
+12/03/2005,Corathus Creep (instance),Bobgib,Haru Sand-Etched Sword,"Haru, The Corathus Beast",,1727,UFM
+12/07/2005,Tirranun's Delve,Raynelyn,Scorched Green-Metal Visor,"Tirranun, the Ancient Protector",,1734,UFA
+12/07/2005,Tirranun's Delve,Blastinthenine,Scorched Green-Metal Visor,"Tirranun, the Ancient Protector",,1735,UFA
+12/08/2005,Ikkinz 4,Onyxex,Gem-Inlaid Cloak,,,1741,UFM
+12/12/2005,Plane of Time,Rasagoth,"Vanazir, Dreamer's Dispair",Terris Thule,,1760,UFA
+12/12/2005,Plane of Time,Mackeever,Earring of Temporal Solctice,Vallon Zek,,1769,UFM
+12/12/2005,Plane of Time,Fremder,Shinal of Ancients,Vallon Zek,,1770,UFM
+12/12/2005,Plane of Time,Maibesow,Sandles of Empowerment,Rallos Zek,,1780,Guest
+12/12/2005,Plane of Time,Gholatron,Necklace of the eternal Visions,Innoruuk,,1781,UFM
+12/22/2005,The Nest,Frostebite,Hammer of the Last Church,Ju'rek,,1801,UFA
+12/23/2005,Plane of Time,Gorgrim,Armguards of the Brute,Terris Thule,,1802,TKM
+12/23/2005,Plane of Time,Gholatron,Girdle of Intense Durabity,Saryrn,,1807,UFM
+12/23/2005,Plane of Time,Vectin,Cloak of Retribution,Cazic Thule,,1814,TKM
+12/23/2005,Plane of Time,Fremder,Staff of Transcendance,Cazic Thule,,1815,UFM
+12/23/2005,Plane of Time,Vectin,Leggings of Furious Might,Bertoxxulous,,1817,TKM
+12/23/2005,Plane of Time,Baneblade,Veil of Inferno,Bertoxxulous,,1818,UFM
+12/23/2005,Plane of Time,Bijaan,Timeless Leather tunic Pattern,Bertoxxulous,,1819,UFM
+12/23/2005,Plane of Time,Aizlynn,Sandles of Empowerment,Rallos Zek,,1821,UFM
+12/23/2005,Plane of Time,Artreth,Bracer of Timless Rage,Innoruuk,,1823,UFA
+12/23/2005,Plane of Time,Kudladar,Jagged Time Forged Blade,Innoruuk,,1825,TKM
+12/26/2005,Chambers of XII,Xasanar,Hallowed Blood-Claw of Shadows,Matriarch Shyra,,1834,UFM
+12/26/2005,The Acent,Foldoer,Tear of Kessdona,Kessdonna the Enlightened,,1839,UFM
+1/1/2006,Corathus Creep,Harjo,Hotplate Metal Shredder,Taskmaster XVII,,1847,TKM
+1/1/2006,"Inktu'ta, the Unmasked Chapel",Samp,Keledrix's Sandstone of Fortatude,"Kelekdrix, Herald of Trushar",,1850,UFO
+1/1/2006,"Inktu'ta, the Unmasked Chapel",Ottar,Stained Threadbear Cape,Noqufiel,,1854,UFM
+1/1/2006,"Inktu'ta, the Unmasked Chapel",Servantes,Pikebladed Ripper of the Arch-thief,Noqufiel,,1858,UFM
+1/1/2006,Riftseekers' Sanctum,Holland,Ilsin's Mantel,King Gelaqua,,1859,UFM
+1/2/2006,Plane of Time,Brutis,"TimeSpinner, Blade of the Hunter",Bertoxxulous,,1881,UFA
+1/2/2006,Plane of Time,Lacie,Earring of Flowing Time,Quarm,,1891,UFM
+1/2/2006,Plane of Time,Kerk,Wristband of Icy Vengence,Quarm,,1892,UFM
+1/7/2006,"Inktu'ta, the Unmasked Chapel",Foldor,Kelekdrix's Sandstone of Fortatude,"Kelekdrix, Herald of Trushar",,1905,UFM
+1/8/2006,Qvic,Nallaa,Muramite Golve Armor,Mshas,,1916,UFM
+1/8/2006,Qvic,Gholatron,Muramite Golve Armor,Mshas,,1917,UFM
+1/9/2006,The Ruined City of Dranik,Daylags,Muramite Shield of Legend,Zun`Muram Volklana,,1926,UFM
+1/18/2006,Plane of Time,Lajon,Talisman of Tainted Energy,Terris Thule,,1970,UFA
+1/18/2006,Plane of Time,Deivas,Shroud of Provocation,Saryrn,,1971,TKM
+1/18/2006,Plane of Time,Kordite,Wand of Temporal Power,Vallon Zek,,1979,Guest
+1/18/2006,Plane of Time,Deivas,Staff of Transcendance,Cazic Thule,,1980,TKM
+1/20/2006,Thundercrest Isles,Klinci,Crystalized Glass Staff,Yar`Lir the Matriarch,,2000,UFM
+1/28/2006,Muramite Proving Grounds (Corruption Trial),Mackeever,Bracelet of the Corruptor,,,2047,UFM
+1/28/2006,Muramite Proving Grounds (Corruption Trial),Erresia,Shaw of Nefarious,,,2048,UFM
+2/25/2006,Muramite Proving Grounds,Aeayenium,Bracer,Lighningcaller Vhalek,,2169,UFM

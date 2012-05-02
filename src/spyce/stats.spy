@@ -1,0 +1,51 @@
+[[\
+import sys
+import eqlogdb
+import webutils
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+w = webutils.getWriter()
+w.start("page")
+
+conn = eqlogdb.EQLogDB.getConnection()
+cur = conn.cursor()
+skip = 0
+
+if request['count']:
+    count = int(request['count'])
+else:
+    count = 200
+
+if request['days']:
+    days = int(request['days'])
+else:
+    days = 90
+
+if request['order']:
+    order = request['order']
+else:
+    order = 'count(*) desc'
+
+for i in range(0, 4):
+    sql = """
+	select first ? skip ? tbl_loot.character_id, tbl_character.name, 
+	count(*), count(*) / %f as ratio from tbl_loot
+	inner join tbl_character on tbl_loot.character_id = tbl_character.character_id
+	inner join tbl_item on tbl_loot.item_id = tbl_item.item_id
+	where tbl_item.item_type_id = 6 
+	and tbl_loot.event_timestamp < CURRENT_TIMESTAMP - %d*%d
+	and tbl_loot.event_timestamp > CURRENT_TIMESTAMP - %d*%d
+	group by tbl_loot.character_id, tbl_character.name
+	order by %s, tbl_character.name asc
+	"""
+    cur.execute(sql%(days, days, i,days, i+1, order), ( count, skip ) )
+
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'players', {
+	'count': str(count), 
+	'skip': str(skip), 
+	'range': 'Last %d to %d days' %(i*days, (i+1)*days)}, 'player')
+w.end()
+print webutils.renderContent(request, response, 'stats.xsl')
+]]

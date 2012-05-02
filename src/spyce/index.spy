@@ -1,0 +1,64 @@
+[[.import name=redirect]][[\
+"""
+vim: sw=4 ts=8 expandtab
+"""
+import mx
+import mx.DateTime
+import sys
+import StringIO
+import eqlogdb
+eqlogdb = reload(eqlogdb)
+from elementtree.SimpleXMLWriter import XMLWriter
+import webutils
+webutils = reload(webutils)
+webutils.setContentType(request, response)
+response.uncacheable()
+
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+
+if request['playerQuery']:
+    sql = "select CHARACTER_ID from TBL_CHARACTER where UPPER(name) like UPPER(?)"
+    params = list()
+    params.append(request['playerQuery'])
+    cur.execute(sql, params)
+    res = cur.fetchone()
+    if res:
+        response.redirect('character.spy?character_id=%s' %(res[0]))
+
+where = """where ((TBL_ITEM.ITEM_TYPE_ID = 5 
+    or TBL_ITEM.ITEM_TYPE_ID = 6 
+    or TBL_ITEM.ITEM_TYPE_ID = 7 
+    or TBL_ITEM.ITEM_TYPE_ID IS NULL)
+    and TBL_LOOT.EVENT_TIMESTAMP > ?)
+"""
+if request['skip']:
+    skip = int(request['skip'])
+else:
+    skip = 0
+
+if request['count']:
+    count = int(request['count'])
+else:
+    count = 50
+
+sql = """
+select FIRST %d SKIP %d TBL_LOOT.LOOT_ID, TBL_LOOT.EVENT_TIMESTAMP,
+'character.spy?character_id=' || TBL_LOOT.CHARACTER_ID as PLAYER_URL,
+'item.spy?item_id=' || TBL_LOOT.ITEM_ID as ITEM_URL,
+TBL_LOOT.CHARACTER_ID, TBL_CHARACTER.NAME as PLAYER_NAME,
+TBL_LOOT.ITEM_ID, TBL_LOOT.LOOT_TYPE_ID as LOOT_TYPE_ID,
+TBL_ITEM.NAME as ITEM_NAME, TBL_ITEM.ITEM_TYPE_ID as ITEM_TYPE_ID
+from (TBL_LOOT left join TBL_CHARACTER on TBL_LOOT.CHARACTER_ID = TBL_CHARACTER.CHARACTER_ID)
+left join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID 
+%s
+order by TBL_LOOT.EVENT_TIMESTAMP DESC 
+""" %(count, skip, where)
+cur.execute(sql, (mx.DateTime.now()-30,))
+w = webutils.getWriter()
+w.start("page", COUNT=str(count), SKIP=str(skip))
+eqlogdb.EQLogDB.resultToXml(cur, w, 'loots', None, 'loot')
+con.close()
+w.end()
+print webutils.renderContent(request, response, 'index.xsl')
+]]

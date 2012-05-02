@@ -1,0 +1,43 @@
+[[\
+import eqlogdb
+import sys
+import webutils
+webutils = reload(webutils)
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+if request['skip']:
+    skip = int(request['skip'])
+else:
+    skip = 0
+
+if request['count']:
+    count = int(request['count'])
+else:
+    count = 500
+
+if request['itemQuery']:
+    where = "where UPPER(TBL_ITEM.NAME) like '%" \
+	    + request['itemQuery'].upper() + "%'"
+else:
+    where = 'where loregroup != 0'
+
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+sql = """
+
+select FIRST %d  SKIP %d NAME, ITEM_ID, ITEM_TYPE_ID, LOREGROUP,
+'item.spy?item_id=' || ITEM_ID as ITEM_URL
+from TBL_ITEM %s
+"""%(count, skip, where)
+#if not form.has_key('show_trash'):
+#    sql = sql + ' where TRASH != 1 or TRASH is NULL'
+cur.execute(sql)
+w = webutils.getWriter()
+
+w.start("page", SKIP=str(skip), COUNT=str(count))
+eqlogdb.EQLogDB.resultToXml(cur, w, 'items', None, 'item')
+w.end()
+print webutils.renderContent(request, response, 'items.xsl')
+]]

@@ -1,0 +1,43 @@
+[[\
+import sys
+import eqlogdb
+import webutils
+
+if request['skip']:
+    skip = int(request['skip'])
+else:
+    skip = 0
+
+if request['count']:
+    count = int(request['count'])
+else:
+    count = 1000
+
+if request['item_type_id']:
+    item_type_id = int(request['item_type_id'])
+else:
+    item_type_id = 6
+
+from elementtree.SimpleXMLWriter import XMLWriter
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+response.uncacheable()
+w = webutils.getWriter()
+webutils.printXSLPI('item_freq.xsl')
+
+w.start("page", { "SKIP": str(skip), "COUNT": str(count), "item_type_id": str(item_type_id) })
+sql = """ select first ? skip ? count(*) as ITEM_COUNT, TBL_ITEM.ITEM_ID as ITEM_ID,
+TBL_ITEM.NAME as ITEM_NAME from TBL_LOOT 
+inner join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID
+where tbl_item.item_type_id = ?
+group by tbl_item.item_id, tbl_item.name
+order by count(*) desc, tbl_item.name
+"""
+cur.execute(sql, [ count, skip, item_type_id])
+eqlogdb.EQLogDB.resultToXml(cur, w, 'items', None, 'item')
+w.end()
+        
+con.close()
+webutils.setContentType(request, response)
+print webutils.renderContent(request, response, 'item_freq.xsl')
+]]

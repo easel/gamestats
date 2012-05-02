@@ -1,0 +1,29 @@
+<%
+import eqlogdb
+import webutils
+webutils = reload(webutils)
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+
+w = webutils.getWriter()
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+cur.execute("""
+select TBL_LOOT.LOOT_ID, TBL_LOOT.EVENT_TIMESTAMP, 
+TBL_LOOT.PLAYER_ID, TBL_PLAYER.NAME as PLAYER_NAME, 
+TBL_LOOT.ITEM_ID, TBL_ITEM.NAME as ITEM_NAME 
+from (TBL_LOOT inner join TBL_PLAYER on TBL_LOOT.PLAYER_ID = TBL_PLAYER.PLAYER_ID)
+inner join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID
+""")
+root = w.start('output')
+for row in cur.itermap():
+    data = dict()
+    for key in row.keys():
+	data[key] = str(row[key])
+    w.start('loot', data)
+    w.end()
+w.end(root)
+print webutils.renderContent(request, response, 'loot.xsl')
+%>

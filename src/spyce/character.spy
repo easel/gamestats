@@ -1,0 +1,90 @@
+[[\
+"""
+vim: sw=4 ts=8 expandtab
+"""
+import sys
+import eqlogdb
+import mx
+from elementtree.SimpleXMLWriter import XMLWriter
+import webutils
+webutils = reload(webutils)
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+w = webutils.getWriter()
+
+w.start("page")
+if request['compare']:
+    print 'comparing'
+    print request['compare']
+else:
+    item_type = 6;
+    #begin = mx.DateTime.Parser.DateTimeFromString('2007-01-01')
+    begin = mx.DateTime.now() - 90
+    end = mx.DateTime.now()
+
+
+    cur.execute(""" select * from TBL_CHARACTER where CHARACTER_ID = ?  """, [request['character_id'] ])
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'characters', None, 'character')
+    cur.execute(""" select TBL_LOOT.ITEM_ID, TBL_LOOT.EVENT_TIMESTAMP, TBL_ITEM.NAME, 
+	'item.spy?item_id=' || TBL_LOOT.ITEM_ID as ITEM_URL from TBL_LOOT 
+	inner join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID 
+	where CHARACTER_ID = ? and TBL_ITEM.ITEM_TYPE_ID = ?
+	order by TBL_LOOT.EVENT_TIMESTAMP DESC
+     """, 
+	(request['character_id'], 5 )
+	)
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'questitems', None, 'item')
+
+    cur.execute(""" select TBL_LOOT.ITEM_ID, TBL_LOOT.SUBMITTER_USER_ID,
+	TBL_LOOT.EVENT_TIMESTAMP, TBL_ITEM.NAME, 
+	'item.spy?item_id=' || TBL_LOOT.ITEM_ID as ITEM_URL from TBL_LOOT 
+	inner join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID 
+	where CHARACTER_ID = ? and TBL_ITEM.ITEM_TYPE_ID = ?
+	order by TBL_LOOT.EVENT_TIMESTAMP DESC
+     """, 
+	(request['character_id'], 6 )
+	)
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'lootitems', None, 'item')
+
+    cur.execute(""" select TBL_LOOT.ITEM_ID,
+	TBL_LOOT.EVENT_TIMESTAMP, TBL_ITEM.NAME, 
+	'item.spy?item_id=' || TBL_LOOT.ITEM_ID as ITEM_URL from TBL_LOOT 
+	inner join TBL_ITEM on TBL_LOOT.ITEM_ID = TBL_ITEM.ITEM_ID 
+	where CHARACTER_ID = ? and TBL_ITEM.ITEM_TYPE_ID = ?
+	order by TBL_LOOT.EVENT_TIMESTAMP DESC
+     """, 
+	(request['character_id'], 7 )
+	)
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'augitems', None, 'item')
+
+    attendance = { '90 days': { 'attended': 0, 'augs': 0, 'loots': 0, 'quests': 0 } }
+    cur.execute("""
+select count(*) from tbl_attendance where
+tbl_attendance.start_time >= ? and
+tbl_attendance.end_time <= ? and
+raid_flag = 1
+and character_id = ?
+    """, (begin, end, request['character_id']))
+    #eqlogdb.EQLogDB.dictToXml(attendance, w)
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'attendance_score', None, 'attended')
+
+    cur.execute("""select * from TBL_ATTENDANCE where
+	RAID_FLAG = 1 
+	and tbl_attendance.start_time >= ? 
+	and tbl_attendance.end_time <= ? 
+	and CHARACTER_ID = ? 
+	order by START_TIME DESC
+	""", ( begin, end, request['character_id']))
+    eqlogdb.EQLogDB.resultToXml(cur, w, 'attendance', None, 'attended')
+    #cur.execute("""
+    #""", 
+    con.close()
+w.end()
+print webutils.renderContent(request, response, 'character.xsl')
+
+]]

@@ -1,0 +1,27 @@
+<xmltag>
+
+<%
+import eqlogdb
+import webutils
+
+webutils.setContentType(request, response)
+response.uncacheable()
+
+
+con = eqlogdb.EQLogDB.getConnection()
+cur = con.cursor()
+w = webutils.getWriter()
+#req.write('<?xml-stylesheet href="mob.xsl" type="text/xml"?>')
+webutils.printXSLPI('index.xsl')
+
+w.start("page")
+cur.execute(""" select * from TBL_MOB where MOB_ID = ?  """, [form['mob_id']])
+eqlogdb.EQLogDB.resultToXml(cur, w, 'mobs', None, 'mob')
+cur.execute(""" select * from TBL_KILL
+    where MOB_ID = ?  """, 
+    [form['mob_id']]
+    )
+eqlogdb.EQLogDB.resultToXml(cur, w, 'kills', None, 'kill')
+w.end()
+%>
+</xmltag>
