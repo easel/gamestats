@@ -1,4 +1,4 @@
-# Django settings for eqlog project.
+import dj_database_url
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,7 +9,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-import dj_database_url
+DATABASES = {}
 DATABASES['default'] =  dj_database_url.config()
 
 # Local time zone for this installation. Choices can be found here:
