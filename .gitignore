@@ -1,0 +1,7 @@
+.idea
+*.iml
+*.pyc
+Include
+Lib
+Scripts
+man
