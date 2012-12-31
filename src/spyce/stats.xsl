@@ -18,7 +18,7 @@ vim:sw=4 ts=8 smarttab
     
     <xsl:template match="//players">
 	<h3>top <xsl:value-of select="@count"/> 
-	    loot stats for <xsl:value-of select="@range"/></h3>
+	    gamestats.loot stats for <xsl:value-of select="@range"/></h3>
 	<dl>
 	<xsl:for-each select="player">
 	    <xsl:if test="preceding-sibling::player[position()=1]/@COUNT != @COUNT or position() = 1">

@@ -22,8 +22,8 @@ for row in cur.itermap():
     data = dict()
     for key in row.keys():
 	data[key] = str(row[key])
-    w.start('loot', data)
+    w.start('gamestats.loot', data)
     w.end()
 w.end(root)
-print webutils.renderContent(request, response, 'loot.xsl')
+print webutils.renderContent(request, response, 'gamestats.loot.xsl')
 %>
