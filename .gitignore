@@ -1,2 +1,10 @@
-venv
+.idea
+*.iml
 *.pyc
+Include
+Lib
+Scripts
+man
+*~
+*.egg-info
+share

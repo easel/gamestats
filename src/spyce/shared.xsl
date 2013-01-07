@@ -98,7 +98,7 @@ vim: sw=4 ts=8 smarttab
            <xsl:template match="loots">
 		<table>
 		<tr><th>Time</th><th>Item</th><th>Player</th></tr>
-                <xsl:for-each select="loot">
+                <xsl:for-each select="gamestats.loot">
                         <tr>
 			    <td><xsl:call-template name="date"><xsl:with-param name="date"><xsl:value-of 
 				select="@EVENT_TIMESTAMP" /></xsl:with-param></xsl:call-template>

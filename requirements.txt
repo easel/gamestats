@@ -1,4 +1,10 @@
-Django==1.4
-distribute==0.6.24
+Django==1.4.3
+distribute==0.6.28
+dj-database-url==0.2.1
+django-nose==1.1
+elementtree
+gunicorn==0.17.0
+lxml==2.3
+nose==1.2.1
 psycopg2==2.4.5
-wsgiref==0.1.2
+south==0.7.6

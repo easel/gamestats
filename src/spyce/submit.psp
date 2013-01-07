@@ -10,7 +10,7 @@ if request.method() == 'POST':
     elem = tree.getroot()
     userid = db.findUserID(elem.get('submitter'))
 
-    elem = tree.getroot().find('loot')
+    elem = tree.getroot().find('gamestats.loot')
     for child in elem.getchildren():
         characterid = db.findCharacterID(child.get('looter'))
         itemid = db.findItemID(child.get('item'))

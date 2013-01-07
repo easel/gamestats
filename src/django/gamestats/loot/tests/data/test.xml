@@ -1,0 +1,57 @@
+<parsedlog submitter="Bardeil">
+    <fights/>
+    <loot>
+        <event item="Eternal Grove Leather Legs Ornament" looter="Nelson" timestamp="2012-10-28T16:54:06"/>
+        <event item="Blue Diamond" looter="Ganarak" timestamp="2012-10-28T16:54:20"/>
+        <event item="Eternal Grove Leather Chest Ornament" looter="Ganarak" timestamp="2012-10-28T16:54:20"/>
+        <event item="Heart of Argath" looter="Bono" timestamp="2012-10-28T16:58:24"/>
+        <event item="Shark Tooth" looter="Bono" timestamp="2012-10-28T16:58:24"/>
+        <event item="Al-Metes" looter="Bono" timestamp="2012-10-28T16:58:25"/>
+        <event item="Blue Diamond" looter="Nelson" timestamp="2012-10-28T17:00:44"/>
+        <event item="Shark Tooth" looter="Nelson" timestamp="2012-10-28T17:00:44"/>
+        <event item="Blue Diamond" looter="Nelson" timestamp="2012-10-28T17:09:44"/>
+        <event item="Eternal Grove Cloth Hands Ornament" looter="Nelson" timestamp="2012-10-28T17:09:44"/>
+        <event item="Scepter of Oseka" looter="Jula" timestamp="2012-10-28T17:13:26"/>
+        <event item="Elegant Headdress of Oseka" looter="Gyna" timestamp="2012-10-28T17:14:00"/>
+        <event item="Elegant Stole of Oseka" looter="Roadkilss" timestamp="2012-10-28T17:14:13"/>
+        <event item="Greathammer of the Currents" looter="Bregax" timestamp="2012-10-28T17:14:30"/>
+        <event item="Elegant Stole of Oseka" looter="Emonyte" timestamp="2012-10-28T17:14:38"/>
+        <event item="Elegant Armwraps of Oseka" looter="Fistdan" timestamp="2012-10-28T17:14:57"/>
+        <event item="Minor Alaran Periapt" looter="Gyna" timestamp="2012-10-28T17:15:26"/>
+        <event item="Minor Alaran Periapt" looter="Korwin" timestamp="2012-10-28T17:15:58"/>
+        <event item="Median Alaran Periapt" looter="Zebrn" timestamp="2012-10-28T17:16:05"/>
+        <event item="Mask of Oseka" looter="Israi" timestamp="2012-10-28T17:16:17"/>
+        <event item="Lesser Alaran Periapt" looter="Valanx" timestamp="2012-10-28T17:16:23"/>
+        <event item="Lesser Alaran Periapt" looter="Delphias" timestamp="2012-10-28T17:16:34"/>
+        <event item="Cowl of the High Priest" looter="Brawndo" timestamp="2012-10-28T17:16:43"/>
+        <event item="Darkwater Pauldrons" looter="Bardeil" timestamp="2012-10-28T17:17:07"/>
+        <event item="Lesser Alaran Periapt" looter="Bardeil" timestamp="2012-10-28T17:17:16"/>
+    </loot>
+    <attendance/>
+    <kills>
+        <kill mob="an elite battlemage" timestamp="2012-10-28T16:50:03"/>
+        <kill mob="an elite battlemage" timestamp="2012-10-28T16:50:04"/>
+        <kill mob="an elite assassin" timestamp="2012-10-28T16:50:14"/>
+        <kill mob="Captain Rysen" timestamp="2012-10-28T16:51:26"/>
+        <kill mob="Oseka`s Oracle Yesleth" timestamp="2012-10-28T16:53:50"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T16:54:23"/>
+        <kill mob="a great white shark" timestamp="2012-10-28T16:56:07"/>
+        <kill mob="a great white shark" timestamp="2012-10-28T16:56:07"/>
+        <kill mob="a great white shark" timestamp="2012-10-28T16:56:15"/>
+        <kill mob="a great white shark" timestamp="2012-10-28T16:57:58"/>
+        <kill mob="Leveth the Shark King" timestamp="2012-10-28T16:58:06"/>
+        <kill mob="a great white shark" timestamp="2012-10-28T16:58:06"/>
+        <kill mob="Nhron the Sea-Eater" timestamp="2012-10-28T17:00:38"/>
+        <kill mob="Desalin the Sea Terror" timestamp="2012-10-28T17:02:52"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:06:15"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:06:18"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:06:52"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:06:58"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:07:31"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:07:37"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:08:01"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:08:08"/>
+        <kill mob="a Hadal warrior" timestamp="2012-10-28T17:08:28"/>
+        <kill mob="High Priest Vyers Rinad" timestamp="2012-10-28T17:08:33"/>
+    </kills>
+</parsedlog>

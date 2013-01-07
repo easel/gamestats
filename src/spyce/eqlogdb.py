@@ -14,12 +14,12 @@ class EQLogDB:
 
     def getConnection():
         return kinterbasdb.connect(
-            host=None, database='/var/firebird/eqlog.fdb',
+            host=None, database='/var/firebird/gamestats.eqlog.fdb',
             user='SYSDBA', password='vsinTI65'
         )
         #return kinterbasdb.connect(
         #    host='firebird.server.realm.ilsw.com', 
-	#    database='/filesrv/firebird0/eqlog.fdb',
+	#    database='/filesrv/firebird0/gamestats.eqlog.fdb',
         #    user='SYSDBA', password='NTSUCKS'
         #k)
     getConnection = Callable(getConnection)
@@ -145,7 +145,7 @@ class EQLogDB:
     def addLoot(self, userid, timestamp, characterid, itemid):
         cur = self.con.cursor()
         try:
-            # Query if we've ever seen this character loot this lore item, OR if somebody
+            # Query if we've ever seen this character gamestats.loot this lore item, OR if somebody
             # else submitted the same item within +- 7 minutes or so
 	    # ignore lore flags for bazu and last blood
 	    sql = """

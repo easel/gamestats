@@ -57,7 +57,7 @@ order by TBL_LOOT.EVENT_TIMESTAMP DESC
 cur.execute(sql, (mx.DateTime.now()-30,))
 w = webutils.getWriter()
 w.start("page", COUNT=str(count), SKIP=str(skip))
-eqlogdb.EQLogDB.resultToXml(cur, w, 'loots', None, 'loot')
+eqlogdb.EQLogDB.resultToXml(cur, w, 'loots', None, 'gamestats.loot')
 con.close()
 w.end()
 print webutils.renderContent(request, response, 'index.xsl')
