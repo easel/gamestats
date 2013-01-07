@@ -357,7 +357,7 @@ class Parser:
     def asXml(self):
         outs = cStringIO.StringIO()
         w = XMLWriter(outs)
-        root = w.start("parsedlog")
+        root = w.start("parsedlog", submitter=self.myname)
         self.fights.asXml(w)
         self.loot.asXml(w)
         self.attendance.asXml(w)

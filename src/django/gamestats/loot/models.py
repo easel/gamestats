@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-from gamestats.loot.managers import LootManager, AttendanceManager
+from gamestats.loot.managers import LootManager, AttendanceManager, KillManager
 
 class ItemType(models.Model):
     name = models.CharField(max_length=100)

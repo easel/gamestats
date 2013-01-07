@@ -1,1 +1,1 @@
-__author__ = 'erik'
+from test_parser import *

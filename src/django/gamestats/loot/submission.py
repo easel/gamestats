@@ -1,25 +1,28 @@
 from xml.etree import ElementTree
-from gamestats.loot.models import Character, Item, Loot, Attendance, Kill
+from django.contrib.auth.models import User
+from gamestats.loot.models import Character, Item, Loot, Attendance, Kill, LootType
 
 def parse_xml(xml):
     """
     Parse an XML submission
     """
 
-    tree = ElementTree.parse(xml)
-    elem = tree.getroot()
-    submitter = Character.objects.get(name=elem.get('submitter'))
+    root = ElementTree.fromstring(xml)
+    submitter = User.objects.get(username__iexact=root.get('submitter'))
 
-    elem = tree.getroot().find('gamestats.loot')
+    elem = root.find('loot')
     for child in elem.getchildren():
-        character = Character.objects.get_or_create(name=child.get('looter'))
-        item = Item.objects.get_or_create(name=child.get('item'))
+        character, _ = Character.objects.get_or_create(name=child.get('looter'))
+        item, _ = Item.objects.get_or_create(name=child.get('item'))
         timestamp = child.get('timestamp').replace('T', ' ')
         Loot.objects.get_or_create(
             submitter=submitter,
             timestamp=timestamp,
-            looter=character,
-            item=item
+            character=character,
+            item=item,
+            defaults = {
+                'lootType': LootType.objects.get(name='Unknown')
+            }
         )
 
 #    elem = tree.getroot().find('attendance')
@@ -35,7 +38,7 @@ def parse_xml(xml):
 #        )
 #        db.addAttendee(userid, characterid, start_time, end_time)
 
-    elem = tree.getroot().find('kills')
+    root.find('kills')
     for child in elem.getchildren():
         killer = Character.objects.get_or_create(name=child.get('killer'))
         killee = Character.objects.get_or_create(name=child.get('killee'))

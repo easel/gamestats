@@ -57,8 +57,6 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.load_template_source',
 )
 
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,8 +76,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'south',                            # needs to be before django_nose
-    'django_nose',                      # needs to be after south
+    'south',
     'gamestats.eqlog',
     'gamestats.loot',
 )

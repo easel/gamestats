@@ -1,5 +1,8 @@
+from django.contrib.auth.models import User
 from django.test import TestCase
 from os.path import dirname, join
+from gamestats.loot.fixtures import initial_data
+from gamestats.loot.submission import parse_xml
 
 class SubmissionTestCase(TestCase):
     """
@@ -10,7 +13,8 @@ class SubmissionTestCase(TestCase):
         """
         Set up the Case
         """
-        self.data_path = join(dirname(__name__), 'test.xml')
+        initial_data.apply()
+        self.data_path = join(dirname(__file__), 'data', 'test.xml')
 
     def test_submit_xml(self):
         """

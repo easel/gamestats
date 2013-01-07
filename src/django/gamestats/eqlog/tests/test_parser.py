@@ -14,7 +14,7 @@ class ParserTestCase(TestCase):
         standardize parser setup routines
         """
         self.data_path = join(dirname(__file__), 'data')
-        self.log_path = join(self.data_path, 'testlog.txt')
+        self.log_path = join(self.data_path, 'eqlog_bardeil_drinal1.txt')
         self.parser = Parser(extract=None, debug=True, myname = 'Bardeil')
 
     def test_logfile_parse(self):
